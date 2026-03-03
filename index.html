@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mati.my — Panduan Urusan Kematian di Malaysia</title>
+    <meta name="description" content="Portal panduan lengkap urusan kematian di Malaysia. Checklist, prosedur, dan maklumat penting untuk keluarga yang kehilangan orang tersayang.">
+    <meta name="keywords" content="kematian, mati, urusan kematian, pengebumian, Malaysia, panduan, checklist">
+    <meta property="og:title" content="Mati.my — Panduan Urusan Kematian di Malaysia">
+    <meta property="og:description" content="Portal panduan lengkap urusan kematian di Malaysia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mati.my">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3c34;
+            --primary-light: #2d5f4f;
+            --accent: #c9a84c;
+            --accent-light: #e8d494;
+            --cream: #faf7f0;
+            --warm-white: #fdfcf9;
+            --text: #2c2c2c;
+            --text-light: #6b6b6b;
+            --border: #e8e2d6;
+            --shadow: rgba(26, 60, 52, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--warm-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Batik-inspired decorative pattern */
+        .batik-border {
+            height: 6px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--accent) 0px,
+                var(--accent) 8px,
+                var(--primary) 8px,
+                var(--primary) 12px,
+                var(--accent-light) 12px,
+                var(--accent-light) 20px,
+                var(--primary) 20px,
+                var(--primary) 24px
+            );
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(201,168,76,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(255,255,255,0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        /* Songket-inspired geometric pattern overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px),
+                repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-bismillah {
+            font-size: 1.1rem;
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 550px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-ayat {
+            font-size: 0.95rem;
+            color: var(--accent-light);
+            font-style: italic;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+
+        .hero-ayat span {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            font-style: normal;
+            opacity: 0.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.9rem 2.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            color: rgba(255,255,255,0.9);
+            padding: 0.9rem 2.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Checklist Section */
+        .checklist-bg {
+            background: var(--cream);
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .checklist-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+
+        .checklist-card:hover {
+            box-shadow: 0 8px 30px var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .checklist-card .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .checklist-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .checklist-card ul {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .checklist-card ul li {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            padding: 0.3rem 0;
+            padding-left: 1.3rem;
+            position: relative;
+        }
+
+        .checklist-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            border-radius: 10px;
+            background: #fff;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .info-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Numbers */
+        .contacts-section {
+            background: var(--primary);
+            color: #fff;
+            padding: 4rem 2rem;
+        }
+
+        .contacts-section .section-header h2 {
+            color: #fff;
+        }
+
+        .contacts-section .section-header p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contacts-section .section-divider {
+            background: var(--accent);
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        .contact-card .contact-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent-light);
+        }
+
+        .contact-card p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .contact-card a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent);
+        }
+
+        /* Panduan Section with Tabs */
+        .panduan-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .panduan-tab {
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 30px;
+            background: transparent;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: all 0.2s;
+        }
+
+        .panduan-tab:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .panduan-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        .panduan-content {
+            display: none;
+            background: #fff;
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .panduan-content.active {
+            display: block;
+        }
+
+        .panduan-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .panduan-content ol {
+            padding-left: 1.5rem;
+        }
+
+        .panduan-content ol li {
+            margin-bottom: 0.8rem;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .panduan-content ol li strong {
+            color: var(--primary);
+        }
+
+        /* Quote Banner */
+        .quote-banner {
+            background: var(--cream);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .quote-banner blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .quote-banner cite {
+            display: block;
+            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: normal;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.2rem 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding-bottom: 1.2rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.82rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 0.8rem;
+                display: block;
+            }
+
+            .btn-primary {
+                display: block;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .quote-banner blockquote {
+                font-size: 1.2rem;
+            }
+
+            .panduan-content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="batik-border"></div>
+
+<nav>
+    <a href="#" class="logo">Mati<span>.my</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#panduan">Panduan</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#info">Maklumat</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#hubungi">Hubungi</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <h1>Panduan Urusan <em>Kematian</em> di Malaysia</h1>
+        <p>Membantu keluarga yang kehilangan orang tersayang dengan panduan lengkap, checklist, dan maklumat penting urusan kematian di Malaysia.</p>
+        <div class="hero-buttons">
+            <a href="#checklist" class="btn-primary">Lihat Checklist</a>
+            <a href="#panduan" class="btn-secondary">Panduan Lengkap</a>
+        </div>
+        <p class="hero-ayat">"Setiap yang bernyawa pasti akan merasai mati."<span>— Surah Ali 'Imran, 3:185</span></p>
+    </div>
+</section>
+
+<!-- Quick Info Cards -->
+<section class="section" id="info">
+    <div class="section-header">
+        <h2>Maklumat Penting</h2>
+        <p>Perkara asas yang perlu diketahui ketika berlaku kematian</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="info-grid">
+        <div class="info-card fade-in">
+            <div class="icon">📋</div>
+            <h3>Sijil Kematian</h3>
+            <p>Perlu didapatkan dalam tempoh 24 jam dari hospital atau klinik yang mengesahkan kematian. Dokumen penting untuk urusan seterusnya.</p>
+        </div>
+        <div class="info-card fade-in">
+            <div class="icon">🕌</div>
+            <h3>Pengurusan Jenazah</h3>
+            <p>Bagi Muslim, jenazah perlu dimandikan, dikafankan, disolat, dan dikebumikan secepat mungkin mengikut hukum syarak.</p>
+        </div>
+        <div class="info-card fade-in">
+            <div class="icon">📑</div>
+            <h3>Pendaftaran JPN</h3>
+            <p>Daftarkan kematian di Jabatan Pendaftaran Negara (JPN) dalam tempoh 7 hari untuk mendapatkan surat beranak kematian rasmi.</p>
+        </div>
+        <div class="info-card fade-in">
+            <div class="icon">💰</div>
+            <h3>Tuntutan & Harta</h3>
+            <p>Urusan KWSP, insurans, pencen, akaun bank, dan pembahagian harta pusaka perlu diuruskan dengan dokumen yang lengkap.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Banner -->
+<div class="quote-banner">
+    <blockquote>
+        "Perbanyakkanlah mengingati penghancur segala kelazatan iaitu kematian."
+    </blockquote>
+    <cite>— Hadis Riwayat al-Tirmizi, al-Nasa'i & Ibn Majah</cite>
+</div>
+
+<!-- Panduan Mengikut Agama -->
+<section class="section" id="panduan">
+    <div class="section-header">
+        <h2>Panduan Mengikut Agama & Adat</h2>
+        <p>Malaysia yang berbilang kaum mempunyai tatacara pengurusan kematian yang berbeza</p>
+        <div class="section-divider"></div>
+    </div>
+
+    <div class="panduan-tabs">
+        <button class="panduan-tab active" onclick="showPanduan('islam')">Islam</button>
+        <button class="panduan-tab" onclick="showPanduan('buddha')">Buddha</button>
+        <button class="panduan-tab" onclick="showPanduan('hindu')">Hindu</button>
+        <button class="panduan-tab" onclick="showPanduan('kristian')">Kristian</button>
+    </div>
+
+    <div class="panduan-content active" id="panduan-islam">
+        <h3>🕌 Panduan Pengurusan Jenazah Islam</h3>
+        <ol>
+            <li><strong>Talqin & Memejamkan Mata:</strong> Bacakan kalimah syahadah dan doa. Pejamkan mata dan tutup aurat si mati.</li>
+            <li><strong>Memandikan Jenazah (Mandi Wajib):</strong> Dimandikan oleh orang yang sama jantina, bilangan ganjil (3, 5, atau 7 kali) dengan air dan bidara/kapur barus.</li>
+            <li><strong>Mengkafankan:</strong> Jenazah dibalut dengan kain kafan putih. Lelaki 3 lapis, perempuan 5 lapis.</li>
+            <li><strong>Solat Jenazah:</strong> Dilaksanakan secara berjemaah dengan 4 takbir. Boleh dilakukan di masjid atau rumah.</li>
+            <li><strong>Pengebumian:</strong> Jenazah dikebumikan menghadap kiblat secepat mungkin. Hubungi pihak masjid atau JAIS/JAWI/MAIN negeri masing-masing.</li>
+            <li><strong>Tahlil & Doa:</strong> Keluarga dan jiran biasanya mengadakan majlis tahlil dan bacaan Yasin.</li>
+        </ol>
+    </div>
+
+    <div class="panduan-content" id="panduan-buddha">
+        <h3>☸️ Panduan Pengurusan Kematian Buddha</h3>
+        <ol>
+            <li><strong>Pemberitahuan:</strong> Hubungi sami atau tokoh agama di kuil berhampiran untuk memulakan upacara.</li>
+            <li><strong>Pembaringan:</strong> Jenazah dibaringkan di rumah pengebumian. Tempoh pembaringan biasanya 3-7 hari.</li>
+            <li><strong>Upacara Sembahyang:</strong> Sami akan membacakan sutra dan doa setiap malam semasa tempoh pembaringan.</li>
+            <li><strong>Pengkrematan/Pengebumian:</strong> Kebanyakan penganut Buddha di Malaysia memilih kremasi. Upacara dilakukan di krematorium.</li>
+            <li><strong>Tempoh Berkabung:</strong> Keluarga memakai pakaian putih atau hitam selama 49 hari atau 100 hari.</li>
+        </ol>
+    </div>
+
+    <div class="panduan-content" id="panduan-hindu">
+        <h3>🙏 Panduan Pengurusan Kematian Hindu</h3>
+        <ol>
+            <li><strong>Pemberitahuan:</strong> Hubungi pandita (sami Hindu) untuk memulakan ritual kematian.</li>
+            <li><strong>Memandikan Jenazah:</strong> Jenazah dimandikan dengan air suci oleh keluarga dan dipakaikan pakaian baru.</li>
+            <li><strong>Upacara di Rumah:</strong> Jenazah dibaringkan dengan kepala menghadap ke selatan. Lampu minyak dinyalakan.</li>
+            <li><strong>Pengkrematan:</strong> Upacara kremasi dilakukan dengan anak sulung lelaki memulakan api. Rites dilakukan oleh pandita.</li>
+            <li><strong>Pengutipan Abu:</strong> Abu dikutip selepas 3 hari dan biasanya dihanyutkan di sungai atau laut.</li>
+            <li><strong>Tempoh Berkabung:</strong> Keluarga berkabung selama 16 hari dengan upacara doa pada hari ke-16.</li>
+        </ol>
+    </div>
+
+    <div class="panduan-content" id="panduan-kristian">
+        <h3>✝️ Panduan Pengurusan Kematian Kristian</h3>
+        <ol>
+            <li><strong>Pemberitahuan:</strong> Hubungi paderi atau pastor gereja untuk bimbingan dan doa.</li>
+            <li><strong>Urusan Rumah Pengebumian:</strong> Jenazah dihantar ke rumah pengebumian untuk disediakan (embalming).</li>
+            <li><strong>Wake / Sembahyang Malam:</strong> Keluarga dan sahabat berkumpul untuk mendoakan si mati, biasanya 2-3 malam.</li>
+            <li><strong>Upacara Pengebumian:</strong> Diadakan di gereja atau kapel dengan bacaan Alkitab, nyanyian, dan khutbah.</li>
+            <li><strong>Pengebumian / Kremasi:</strong> Bergantung kepada pilihan keluarga. Upacara komital dilakukan di tanah perkuburan atau krematorium.</li>
+        </ol>
+    </div>
+</section>
+
+<!-- Checklist Section -->
+<section class="section checklist-bg" id="checklist">
+    <div class="section-header">
+        <h2>Checklist Urusan Kematian</h2>
+        <p>Langkah-langkah penting yang perlu dilakukan apabila berlaku kematian</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="checklist-grid">
+        <div class="checklist-card fade-in">
+            <div class="step-number">1</div>
+            <h3>Segera (0-24 Jam)</h3>
+            <p>Perkara yang perlu dilakukan dengan segera:</p>
+            <ul>
+                <li>Dapatkan pengesahan kematian dari doktor</li>
+                <li>Hubungi ahli keluarga terdekat</li>
+                <li>Dapatkan surat perakuan kematian dari hospital</li>
+                <li>Hubungi pihak agama (masjid/kuil/gereja)</li>
+                <li>Hubungi syarikat pengurusan jenazah (jika perlu)</li>
+            </ul>
+        </div>
+        <div class="checklist-card fade-in">
+            <div class="step-number">2</div>
+            <h3>Dalam Masa 7 Hari</h3>
+            <p>Urusan rasmi yang perlu diselesaikan:</p>
+            <ul>
+                <li>Daftar kematian di JPN (Jabatan Pendaftaran Negara)</li>
+                <li>Dapatkan sijil kematian rasmi</li>
+                <li>Maklumkan majikan si mati</li>
+                <li>Hubungi bank untuk akaun bersama</li>
+                <li>Semak polisi insurans nyawa</li>
+            </ul>
+        </div>
+        <div class="checklist-card fade-in">
+            <div class="step-number">3</div>
+            <h3>Dalam Masa 1 Bulan</h3>
+            <p>Tuntutan dan permohonan penting:</p>
+            <ul>
+                <li>Tuntutan KWSP (Kumpulan Wang Simpanan Pekerja)</li>
+                <li>Tuntutan PERKESO (jika berkaitan)</li>
+                <li>Permohonan pencen terbitan (jika layak)</li>
+                <li>Kemaskini rekod utiliti (TNB, Air, Unifi)</li>
+                <li>Maklumkan LHDN untuk taksiran akhir</li>
+            </ul>
+        </div>
+        <div class="checklist-card fade-in">
+            <div class="step-number">4</div>
+            <h3>Dalam Masa 6 Bulan</h3>
+            <p>Urusan harta dan perundangan:</p>
+            <ul>
+                <li>Semak wasiat / hibah / faraid si mati</li>
+                <li>Mohon Surat Kuasa Mentadbir (Letter of Administration)</li>
+                <li>Uruskan pertukaran hak milik hartanah</li>
+                <li>Tukar nama kenderaan (JPJ)</li>
+                <li>Lantik peguam untuk urusan harta pusaka</li>
+            </ul>
+        </div>
+        <div class="checklist-card fade-in">
+            <div class="step-number">5</div>
+            <h3>Dokumen Diperlukan</h3>
+            <p>Senarai dokumen penting untuk urusan kematian:</p>
+            <ul>
+                <li>Kad pengenalan (MyKad) si mati</li>
+                <li>Surat perakuan kematian dari hospital</li>
+                <li>Sijil kematian rasmi dari JPN</li>
+                <li>Surat beranak si mati</li>
+                <li>Dokumen perkahwinan (jika berkaitan)</li>
+                <li>Penyata KWSP / buku bank</li>
+            </ul>
+        </div>
+        <div class="checklist-card fade-in">
+            <div class="step-number">6</div>
+            <h3>Sokongan Emosi</h3>
+            <p>Jangan abaikan kesejahteraan mental:</p>
+            <ul>
+                <li>Hubungi Talian Kasih: 15999</li>
+                <li>Befrienders Malaysia: 03-7627 2929</li>
+                <li>Berkongsi perasaan dengan keluarga</li>
+                <li>Dapatkan kaunseling jika perlu</li>
+                <li>Beri masa untuk proses berduka</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Contacts -->
+<section class="contacts-section" id="hubungi">
+    <div class="section-header">
+        <h2>Nombor Penting</h2>
+        <p>Simpan nombor-nombor ini untuk kegunaan kecemasan</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="contacts-grid">
+        <div class="contact-card">
+            <div class="contact-icon">🚑</div>
+            <h4>Ambulans / Kecemasan</h4>
+            <p>MERS 999</p>
+            <a href="tel:999">999</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">👮</div>
+            <h4>Polis</h4>
+            <p>Polis Diraja Malaysia</p>
+            <a href="tel:999">999</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">🏥</div>
+            <h4>Hospital Kerajaan</h4>
+            <p>KKM Info Line</p>
+            <a href="tel:+603-88810200">03-8881 0200</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h4>Talian Kasih</h4>
+            <p>Sokongan & Kaunseling</p>
+            <a href="tel:15999">15999</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">🏛️</div>
+            <h4>JPN</h4>
+            <p>Pendaftaran Kematian</p>
+            <a href="tel:+603-88801000">03-8880 1000</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <h4>KWSP (EPF)</h4>
+            <p>Tuntutan Kematian</p>
+            <a href="tel:+603-89226000">03-8922 6000</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">🛡️</div>
+            <h4>PERKESO (SOCSO)</h4>
+            <p>Tuntutan Pampasan</p>
+            <a href="tel:+601300221100">1-300-22-1100</a>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">❤️</div>
+            <h4>Befrienders</h4>
+            <p>Sokongan Emosi 24/7</p>
+            <a href="tel:+60376272929">03-7627 2929</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section" id="faq">
+    <div class="section-header">
+        <h2>Soalan Lazim (FAQ)</h2>
+        <p>Jawapan kepada soalan-soalan yang sering ditanya</p>
+        <div class="section-divider"></div>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Apakah dokumen yang diperlukan untuk mendaftar kematian di JPN?
+            </button>
+            <div class="faq-answer">
+                <p>Anda memerlukan: (1) Kad pengenalan (MyKad) si mati, (2) Surat perakuan kematian daripada doktor/hospital, (3) Kad pengenalan pemohon/waris, dan (4) Buku daftar perkahwinan (jika ada). Pendaftaran perlu dilakukan dalam tempoh 7 hari dari tarikh kematian.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Bagaimana cara menuntut wang KWSP si mati?
+            </button>
+            <div class="faq-answer">
+                <p>Waris perlu mengisi Borang KWSP 9KM (AHL) dan menghantarnya ke mana-mana cawangan KWSP berserta: sijil kematian, MyKad pemohon, surat penama/waris, dan buku akaun bank pemohon. Proses biasanya mengambil masa 14-30 hari bekerja.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Apakah perbezaan antara wasiat, faraid, dan hibah?
+            </button>
+            <div class="faq-answer">
+                <p><strong>Wasiat</strong> adalah pesanan terakhir si mati tentang pembahagian harta (maksimum 1/3 harta untuk bukan waris). <strong>Faraid</strong> adalah pembahagian harta mengikut hukum Islam yang telah ditetapkan. <strong>Hibah</strong> adalah pemberian harta semasa hidup yang berkuat kuasa serta-merta. Bagi orang Islam, faraid terpakai untuk baki 2/3 harta selepas wasiat dilaksanakan.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Berapa kos pengurusan jenazah di Malaysia?
+            </button>
+            <div class="faq-answer">
+                <p>Kos berbeza mengikut lokasi dan jenis perkhidmatan. Untuk jenazah Islam, kos purata antara RM500-RM3,000 termasuk mandi, kafan, dan pengebumian. Untuk perkhidmatan rumah pengebumian (non-Muslim), kos purata antara RM3,000-RM15,000 bergantung kepada pakej yang dipilih. Terdapat juga bantuan kematian dari kerajaan dan KWSP.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Apakah bantuan kewangan yang boleh dituntut?
+            </button>
+            <div class="faq-answer">
+                <p>Antara bantuan yang boleh dituntut: (1) Wang KWSP si mati, (2) Manfaat kematian PERKESO, (3) Pencen terbitan (untuk pesara kerajaan), (4) Insurans nyawa / takaful, (5) Bantuan Jabatan Kebajikan Masyarakat (JKM), dan (6) Wang khairat kematian dari masjid/persatuan. Setiap tuntutan memerlukan sijil kematian rasmi.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Mati.my</h4>
+            <p>Portal panduan urusan kematian di Malaysia. Membantu rakyat Malaysia menguruskan hal-hal berkaitan kematian dengan lebih teratur dan tenang.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Pautan Pantas</h4>
+            <a href="#panduan">Panduan Agama</a>
+            <a href="#checklist">Checklist Kematian</a>
+            <a href="#info">Maklumat Penting</a>
+            <a href="#faq">Soalan Lazim</a>
+            <a href="#hubungi">Nombor Penting</a>
+        </div>
+        <div class="footer-section">
+            <h4>Pautan Berguna</h4>
+            <a href="https://www.jpn.gov.my" target="_blank" rel="noopener">JPN Malaysia</a>
+            <a href="https://www.kwsp.gov.my" target="_blank" rel="noopener">KWSP / EPF</a>
+            <a href="https://www.perkeso.gov.my" target="_blank" rel="noopener">PERKESO / SOCSO</a>
+            <a href="https://www.jkm.gov.my" target="_blank" rel="noopener">Jabatan Kebajikan Masyarakat</a>
+        </div>
+        <div class="footer-section">
+            <h4>Hubungi Kami</h4>
+            <p>Ada cadangan atau maklumat untuk dikemaskini?</p>
+            <a href="mailto:info@mati.my">info@mati.my</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mati.my — Panduan Urusan Kematian Malaysia. Semua maklumat adalah untuk rujukan umum sahaja.</p>
+    </div>
+</footer>
+
+<div class="batik-border"></div>
+
+<script>
+    // Mobile Nav Toggle
+    function toggleNav() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    // Panduan Tabs
+    function showPanduan(id) {
+        document.querySelectorAll('.panduan-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.panduan-tab').forEach(el => el.classList.remove('active'));
+        document.getElementById('panduan-' + id).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isActive = answer.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.faq-question').forEach(el => el.classList.remove('active'));
+
+        // Open clicked (if wasn't active)
+        if (!isActive) {
+            answer.classList.add('active');
+            btn.classList.add('active');
+        }
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Close mobile nav
+                document.getElementById('navLinks').classList.remove('active');
+            }
+        });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
